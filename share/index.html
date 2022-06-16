@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片分享</title>
+</head>
+<body>
+  <button onclick="handleShare()">分享图片</button>
+</body>
+<script>
+  function handleShare () {
+    navigator.share({
+      title: '分享图片',
+      text: '白宇',
+      url: location.href
+    })
+  }
+</script>
+</html>
