@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>经纬度转换工具</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 30px auto;
+      padding: 0 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .item {
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .item label {
+      width: 30%;
+      text-align: right;
+    }
+    .item input, .item select {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="item">
+      <label for="gps">经纬度：</label>
+      <input name="gps" id="gps" />
+    </div>
+    <div class="item">
+      <label for="current">当前坐标系：</label>
+      <select id="current">
+        <option value="WGS84" selected>谷歌地图</option>
+        <option value="BD09">百度地图</option>
+        <option value="GCJ02">高德地图</option>
+        <option value="GCJ02">腾讯地图</option>
+      </select>
+    </div>
+    <div class="item">
+      <label for="target">当前坐标系：</label>
+      <select id="target">
+        <option value="WGS84">谷歌地图</option>
+        <option value="BD09" selected>百度地图</option>
+        <option value="GCJ02">高德地图</option>
+        <option value="GCJ02">腾讯地图</option>
+      </select>
+    </div>
+    <div class="item">
+      <button onclick="transform()">转换</button>
+    </div>
+    <div class="item">转换后的值</div>
+    <div class="item">
+      <input id="targetValue" />
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/gcoord/dist/gcoord.js"></script>
+<script type="text/javascript">
+  let current = document.getElementById('current')
+  let target = document.getElementById('target')
+
+  function transform() {
+    let gps = document.getElementById('gps')
+    let [lng, lat] = gps.value.split(',')
+    let currentIndex = current.selectedIndex
+    let currentV = current.options[currentIndex].value
+    let targetIndex = target.selectedIndex
+    let targetV = target.options[targetIndex].value
+
+    let result = gcoord.transform([+lng, +lat], gcoord[currentV], gcoord[targetV])
+    document.getElementById('targetValue').value = result
+  }
+</script>
+</html>
