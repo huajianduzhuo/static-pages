@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .iframe {
+        width: 100%;
+        height: 500px;
+        border: 5px solid lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      这是主页面哈哈哈哈哈哈哈哈哈哈或或或或哈哈哈哈哈哈哈哈哈哈或或或或或或或
+    </div>
+    <div>
+      <input type="text" />
+    </div>
+    <button onclick="openPage()">打开</button>
+  </body>
+  <script>
+    function openPage() {
+      // window.open('./b.html', '_blank')
+      let iframe = document.createElement('iframe')
+      iframe.src = 'http://help.bjca.cn/private/eleservice.html'
+      // iframe.src = './b.html'
+      iframe.classList.add('iframe')
+      document.body.appendChild(iframe)
+      iframe.onload = () => {
+        console.log('load')
+        iframe.contentWindow.document.getElementById('confirm')
+          .addEventListener('click', () => {
+            console.log('iframe invoked click event')
+            document.body.removeChild(iframe)
+          })
+      }
+    }
+  </script>
+</html>

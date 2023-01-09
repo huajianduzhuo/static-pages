@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>这是iframe嵌套的页面</div>
+    <button id="confirm" onclick="closePage()">关闭页面</button>
+  </body>
+  <script>
+    function closePage() {
+      if (window.WeixinJSBridge) {
+        window.WeixinJSBridge.call('closeWindow') // 微信，只是微信就用这个API。
+        return
+      }
+      console.log('close')
+      window.close()
+    }
+  </script>
+</html>

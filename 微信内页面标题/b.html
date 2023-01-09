@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  这是页面22222222222222222222222
+</body>
+<script>
+  document.title = '\u200E'
+  let iframe = document.createElement('iframe')
+  iframe.style.display = 'none'
+  document.body.appendChild(iframe)
+  iframe.onload = function functionName() {
+    setTimeout(() => {
+      document.body.removeChild(iframe)
+    }, 0);
+  }
+</script>
+</html>
