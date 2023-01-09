@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 990px;
+            margin-bottom: 20px;
+            overflow: hidden
+        }
+
+        .rightTop {
+            float: right;
+            margin-right: 35px
+        }
+
+        .container {
+            overflow: hidden
+        }
+
+        .sectionTitle {
+            margin-bottom: 20px
+        }
+
+        .customerInfo {
+            margin-bottom: 15px
+        }
+
+        .container > div {
+            margin-bottom: 15px;
+            width: 330px;
+            float: left
+        }
+
+        div.key {
+            float: left;
+            width: 120px
+        }
+
+        div.value {
+            float: left;
+            width: 180px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #000
+        }
+
+        .container > div.full {
+            width: 66.66%;
+            overflow: hidden
+        }
+
+            .container > div.full .value {
+                width: 510px
+            }
+
+        .signature > div {
+            float: left;
+            width: 50%;
+            font-weight: bold
+        }
+
+        .container .clear {
+            display: block;
+            clear: both;
+            margin-bottom: 0;
+            width: 0;
+            float: none
+        }
+
+        p {
+            margin-bottom: 6px;
+            margin-top: 0
+        }
+
+        section p {
+            margin: 0
+        }
+
+        h1 {
+            margin-bottom: 20px
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 400
+        }
+
+        li {
+            list-style: none;
+            margin: 0;
+            margin-bottom: 10px
+        }
+
+            p.MsoNormal, li.MsoNormal, div.MsoNormal {
+                margin-top: 0in;
+                margin-right: 0in;
+                margin-bottom: 8.0pt;
+                margin-left: 0in;
+                line-height: 106%;
+                font-size: 11.0pt;
+                font-family: 宋体,SimSun;
+            }
+
+        .mainblock {
+            margin-bottom: 4.5pt;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            line-height: normal
+        }
+
+        .mainblocknewroman {
+            font-size: 10.0pt;
+            font-family: 宋体,SimSun;
+            color: black
+        }
+
+        .mainblocksongti {
+            font-size: 10.0pt;
+            font-family: 宋体,SimSun;
+            color: black
+        }
+
+        .mainblocknum {
+            font-size: 10.0pt;
+            font-family: 宋体,SimSun;
+            color: black
+        }
+
+        .mainblock10 {
+            margin-bottom: 7.5pt;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            line-height: normal
+        }
+
+        .blankrowp {
+            margin-bottom: 0in;
+            margin-bottom: .0001pt;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            line-height: normal
+        }
+
+        .blankrowspan {
+            font-size: 12.0pt;
+            font-family: 宋体,SimSun;
+            color: black
+        }
+    </style>
+</head>
+
+<body style="width: 990px;margin: 0;padding: 25px;font-family:宋体,SimSun;font-size: 13px;">
+    <h1 style="text-align: center;font-weight: 400;">梅赛德斯-奔驰租赁有限公司租赁业务电子申请书</h1>
+    <section>
+        <p class="rightTop">申请号：{{ApplicationNumber}}</p>
+        <p class="customerInfo">授权人/担保人：{{CompanyName}}</p>
+        <p class="customerInfo">统一社会信用代码：{{CompanyRegistrationNumber}}</p>
+        <p class="customerInfo">被授权人：梅赛德斯-奔驰租赁有限公司</p>
+        <p class="customerInfo">统一社会信用代码：911100005877260101</p>
+        <p class="customerInfo">电子申请书生效日期：{{SignatureDate}}</p>
+    </section>
+
+    <section>
+        <div class="sectionTitle">公司信息</div>
+        <div class="container">
+            <div class="full">
+                <div class="key">公司名称：</div>
+                <div class="value">{{CompanyName}}</div>
+            </div>
+            <div>
+                <div class="key">企业类型/公司性质：</div>
+                <div class="value">{{CompanyBusinessTypeCode}}</div>
+            </div>
+            <div>
+                <div class="key">统一社会信用代码：</div>
+                <div class="value">{{CompanyRegistrationNumber}}</div>
+            </div>
+            <div>
+                <div class="key">组织机构代码：</div>
+                <div class="value">{{CompanyOrganizationCode}}</div>
+            </div>
+            <div>
+                <div class="key">国税登记号码：</div>
+                <div class="value">{{CompanyStateTaxRegistrationNumber}}</div>
+            </div>
+            <div>
+                <div class="key">地税登记号码：</div>
+                <div class="value">{{CompanyLocalTaxRegistrationNumber}}</div>
+            </div>
+            <div class="full">
+                <div class="key">法人代表姓名：</div>
+                <div class="value">{{CompanyRepresentationName}}</div>
+            </div>
+            <div>
+                <div class="key">注册日期：</div>
+                <div class="value">{{CompanyTaxRegistrationDate}}</div>
+            </div>
+            <div>
+                <div class="key">注册失效日期：</div>
+                <div class="value">{{CompanyTaxRegistrationExpiryDate}}</div>
+            </div>
+            <div>
+                <div class="key">业务开始于：</div>
+                <div class="value">{{CompanyEstablishedSince}}</div>
+            </div>
+            <div>
+                <div class="key">中征码：</div>
+                <div class="value">{{CompanyLoanCardNumber}}</div>
+            </div>
+            <div>
+                <div class="key">财务人员姓名：</div>
+                <div class="value">{{CompanyFinanceManagerName}}</div>
+            </div>
+            <div>
+                <div class="key">财务人员手机号：</div>
+                <div class="value">{{CompanyFCContactNumber}}</div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="sectionTitle">办公地址</div>
+        <div class="container">
+            <div>
+                <div class="key">现办公用房类型：</div>
+                <div class="value">{{AddressProperty}}</div>
+            </div>
+            <div>
+                <div class="key">省份：</div>
+                <div class="value">{{AddressProvince}}</div>
+            </div>
+            <div>
+                <div class="key">城市：</div>
+                <div class="value">{{AddressCity}}</div>
+            </div>
+            <div class="full">
+                <div class="key">公司办公地址：</div>
+                <div class="value">{{AddressDetailAddress}}</div>
+            </div>
+            <div class="clear"></div>
+            <div>
+                <div class="key">自何时起运营：</div>
+                <div class="value">{{AddressOperatingSince}}</div>
+            </div>
+            <div>
+                <div class="key">至：</div>
+                <div class="value">{{AddressRentTo}}</div>
+            </div>
+            <div class="clear"></div>
+            <div>
+                <div class="key">房屋面积：</div>
+                <div class="value">{{AddressSpace}}m<sup>2</sup></div>
+            </div>
+            <div>
+                <div class="key">租金：</div>
+                <div class="value">{{AddressMonthlyRental}}</div>
+            </div>
+        </div>
+    </section>
+    {{PartialTemp}}
+    <section class="propertyOthers">
+        <div class="sectionTitle">收入信息</div>
+        <div class="container">
+            <div>
+                <div class="key">银行流水所显示月收入：</div>
+                <div class="value">{{CompanyAvgBalance}}</div>
+            </div>
+            <div>
+                <div class="key">税后月收入总和：</div>
+                <div class="value">{{CompanyBusinessMonthlyIncome}}</div>
+            </div>
+        </div>
+    </section>
+    <p calss="MsoNormal">
+        <b>
+            <span class=mainblocknewroman>***</span>
+        </b>
+        <b>
+            <span class=mainblocksongti>重要提示：为了保障申请人/担保人(以下合称“授权人”或“本单位”)的合法权益，请授权人务必审慎阅读、充分理解以下条款。</span>
+        </b>
+    </p>
+    <p class=blankrowp>
+        <span class=mainblocknewroman>
+            <br>
+            <br>
+        </span>
+        <span class=blankrowspan></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>本《梅赛德斯-奔驰租赁有限公司租赁业务电子申请书》(“本申请书”)双方为梅赛德斯-奔驰租赁有限公司(下称“奔驰租赁”)与授权人，鉴于授权人将在线申请奔驰租赁业务，故在此同意如下事项：</span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>1.授权人通过互联网(Internet)及移动终端点击勾选“我同意《梅赛德斯-奔驰租赁有限公司租赁业务电子申请书》”或其他能够表明授权人确认同意本申请书的按钮（例如按钮上书写“同意电子申请书内容”或类似文字，且页面上同时列明了本申请书的内容或者可以有效展示本申请书内容的链接）或以其他合理方式表明授权人与奔驰租赁确认了本申请书，本申请书即刻生效，且授权人清楚知悉，并同意接受和遵守本申请书的全部内容及法律责任。</span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <b>
+            <span class=mainblocksongti>2.“授权用途”:奔驰租赁为审核融资租赁申请、审核担保人资质、风险管理、处理本单位征信异议、持续为授权人提供租赁产品及服务、办理本单位向奔驰租赁申请的其他租赁类业务。</span>
+        </b>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <b>
+            <span class=mainblocksongti>3.“授权期限”:自上述生效日期起至申请被正式拒绝或双方之间的所有权利义务全部履行完毕（以较晚者为准）为止。</span>
+        </b>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <b>
+            <span class=mainblocksongti>4.“授权内容”:授权人在此同意授权奔驰租赁，在“授权用途”范围内，以法律法规允许的方式，从事以下授权行为：</span>
+        </b>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p class=MsoNormal>
+        <b>
+            <span class=mainblocksongti>（1）向中国人民银行金融信用信息基础数据库查询、报送、提供本单位的基本信息、信审信息等相关信用信息；</span>
+        </b>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p class=MsoNormal>
+        <b>
+            <span class=mainblocksongti>（2）可以将获得的本单位不良信息（含授权人在融资租赁期间内产生的逾期记录等不良信息）向中国人民银行金融信用信息基础数据库提供；</span>
+        </b>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p class=MsoNormal>
+        <b>
+            <span class=mainblocksongti>（3）自行或委托第三方通过全国公民身份证号码查询服务中心、其他依法设立的征信机构、其他机构﹡查询、采集、整理、保存、核实、使用本单位的信息（包括但不限于单位名称、地址、电子邮件、收入、不动产、商业数据、信用信息、存款、有价证券、商业保险、纳税数额等），以及其他有权机关要求或依法规定需要提供的信息；无论本申请最终是否被批准，奔驰租赁均可在做出决定前就本申请的相关信息和事宜进行调查。</span>
+        </b>
+        <span class=mainblocknewroman></span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p class=MsoNormal>
+        <b>
+            <span class=mainblocksongti>（4）当奔驰租赁在“授权用途”范围内，委托第三方采集、核实、提供本单位的信息时，本单位同意授权合法存有本单位信息的机构向该第三方机构（包括但不仅限于鹏元征信有限公司、百融云创科技股份有限公司以及百行征信有限公司等）提供本单位的上述信息。</span>
+        </b>
+        <span class=mainblocknewroman></span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <b>
+            <span class=mainblocksongti>5.本单位同意奔驰租赁自申请日期起至合同履行完毕后，在法律法规允许的范围内，保存和处理本单位提交的信息和文件，并视情况在“授权用途”范围内，向奔驰租赁关联公司（包括但不限于戴姆勒集团内的任何公司）、奔驰租赁的服务机构、代理人、外包作业机构以及奔驰租赁的其他业务合作伙伴（包括但不限于经销商）提供授权人的信息。奔驰租赁承诺将要求接收授权人信息的机构对授权人的信息承担保密义务。</span>
+        </b>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>6.本单位知晓、充分理解并接受上述信息被查询、采集、整理、保存、核实和使用可能产生的不利后果，包括但不限于：虽采取了严格的符合国家认证标准的安全保护措施对所采集的上述信息实施了安全保护，但仍可能存在的因不可抗力或高科技本身所不可克服的漏洞或意外的恶意黑客攻击导致部分信息泄露的风险。</span>
+        <span class=mainblocknewroman></span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>7.本单位同意并自愿填写本申请书，本单位保证提供的信息均是真实有效、准确和完整，并了解和愿意承担因申请资料不真实或虚假、不准确、不完整所带来的一切后果和法律责任。如本单位提供的信息虚假或有误，奔驰租赁有权以本单位提供虚假信息为由，随时宣布相关申请的批复无效、终止相关协议、处分相关标的物、要求本单位提前偿还相关申请所涉及的款项或者对本单位提起法律诉讼等。</span>
+        <span class=mainblocknewroman></span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>8.本单位已知悉并理解上述授权和保证条款，同时奔驰租赁应严格遵守上述授权。如奔驰租赁超出授权范围查询或使用本单位信息，奔驰租赁将承担相应后果及法律责任。</span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>9.在本单位为担保人的情形下，本单位同意：为申请人向奔驰租赁申请的租赁产品的还款义务承担连带保证责任，如申请人未能按时归还相关款项或债务，本单位保证代申请人向奔驰租赁履行还款义务且奔驰租赁有权随时向本单位要求偿还。</span>
+        <span class=mainblocknewroman></span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>10.授权人应妥善保管本单位和/或由本单位授权签署本申请书的自然人的下列信息、资料和硬件设备：</span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p class=mainblock10>
+        <span class=mainblocksongti>（1）身份证、银行卡及其密码、CVV码、有效期等卡片信息；</span>
+    </p>
+    <p class=mainblock10>
+        <span class=mainblocksongti>（2）手机等移动终端及SIM卡等信息；</span>
+    </p>
+    <p class=mainblock10>
+        <span class=mainblocksongti>（3）注册用户名及其登录密码；</span>
+    </p>
+    <p class=mainblock10>
+        <span class=mainblocksongti>（4）指纹信息、虹膜信息、人脸信息、声纹信息等生物识别信息。</span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <span></span>
+        <span class=mainblocksongti>11.授权人应妥善保管上述资料、信息和硬件设备，并确保本单位和/或由本单位授权签署本申请书的自然人的手机等移动终端设备在安全、无病毒、未被入侵、未被监控、未被非法控制的环境下运行和使用。若本单位和/或由本单位授权签署本申请书的自然人泄露了上述信息中的任意一项或遗失了上述硬件设备，由此导致的风险和损失应由授权人自行承担。</span>
+        <span class=mainblocknewroman></span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <b>
+            <span class=mainblocksongti>12.本单位已知悉，除了公示的收费项目，奔驰租赁不再收取其他费用，也未授权任何第三方以奔驰租赁名义、或以为客户提供与奔驰租赁相关租赁服务为由收取费用。</span>
+        </b>
+        <b>
+            <span class=mainblocknewroman></span>
+        </b>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocknewroman>&nbsp;</span>
+    </p>
+    <p calss="MsoNormal">
+        <span class=mainblocksongti>﹡“其他机构”包括但不限于：中国金融认证中心、元素征信有限责任公司、睿智合创（北京）科技有限公司、鹏元征信有限公司、百融云创科技股份有限公司、北京百度网讯科技有限公司以及百行征信有限公司等提供的数据信息。</span>
+        <span class=mainblocknewroman></span>
+        <span class=mainblocknewroman></span>
+    </p>
+    <p class=blankrowp>
+        <span class=blankrowspan>&nbsp;</span>
+    </p>
+    <br>
+    <div class="signature">
+        <div>
+            <b>授权人：<label style="color:white">ap</label></b>
+        </div>
+        <div>
+            <b>被授权人：梅赛德斯-奔驰租赁有限公司</b>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

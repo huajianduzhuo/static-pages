@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="./static/index.css?sleep=3000"> -->
+  <style>
+    p {
+      color: green;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let p = document.querySelector('p')
+      console.log('DOMContentLoaded', p)
+    })
+    window.addEventListener('load', () => {
+      let p = document.querySelector('p')
+      console.log('load', p)
+    })
+  </script>
+</head>
+<body>
+  <p>HI </p>
+  <script src="./static/index.js?sleep=3000"></script>
+  <p>BAIYU</p>
+  <style>
+    p {
+      color: pink;
+    }
+  </style>
+  <script src="./static/index.js?sleep=7000"></script>
+  <p>WHITE</p>
+  <style>
+    p {
+      color: lightblue;
+    }
+  </style>
+  <script src="./static/index.js?sleep=8000"></script>
+</body>
+</html>

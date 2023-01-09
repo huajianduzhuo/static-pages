@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let p = document.querySelector('p')
+      console.log('DOMContentLoaded', p)
+    })
+    window.addEventListener('load', () => {
+      let p = document.querySelector('p')
+      console.log('load', p)
+    })
+  </script>
+  <link rel="stylesheet" href="./static/index.css?sleep=3000">
+</head>
+<body>
+  <p>HI </p>
+  <p>WHITE</p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+    }
+    .erweima {
+      flex: 1;
+      background: lightblue;
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: lightpink;
+      opacity: 0.5;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="erweima" id="erweima"></div>
+    <div class="mask" id="mask"></div>
+  </div>
+</body>
+<script>
+  let erweima = document.getElementById('erweima')
+  let mask = document.getElementById('mask')
+  erweima.addEventListener('touchstart', ev => {
+    console.log('erweima touchstart')
+    mask.style.display = 'block'
+  })
+  erweima.addEventListener('touchend', ev => {
+    console.log('erweima touchend')
+    mask.style.display = 'none'
+  })
+  mask.addEventListener('touchstart', ev => {
+    console.log('mask touchstart')
+  })
+  mask.addEventListener('touchend', ev => {
+    console.log('mask touchend')
+  })
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>复制</title>
+</head>
+<body>
+  <input type="text" id="tocopy" placeholder="输入用来复制的内容">
+  <br>
+  <button onclick="copyFromInput()">复制</button>
+  <br>
+  <input type="text" id="copytohere" placeholder="复制在此处">
+  <br>
+  <div id="dd"></div>
+  <div id="ff"></div>
+</body>
+<script>
+  function copy(str) {
+    let range = document.createRange();
+    let div = document.createElement('div');
+    div.style.position = 'absolute';
+    div.style.left = '-9999px'
+    div.style.color = 'transparent'
+    div.textContent = str
+    document.body.appendChild(div)
+    range.selectNode(div);
+
+    const selection = window.getSelection();
+    if(selection.rangeCount > 0) selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand('copy');
+    selection.removeAllRanges();
+
+    range = null
+    document.body.removeChild(div)
+    div = null
+    document.getElementById('ff').innerHTML += 'copy'
+  }
+  function copy2(str) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(str).then(() => {
+        document.getElementById('ff').innerHTML += 'copy2'
+      }).catch(() => {
+        document.getElementById('ff').innerHTML += 'catch'
+        copy(str)
+      })
+    } else {
+      copy(str)
+    }
+  }
+  function copyFromInput() {
+    const str = document.getElementById('tocopy').value
+    copy2(str)
+  }
+  document.getElementById('dd').innerHTML = navigator.clipboard
+</script>
+</html>
